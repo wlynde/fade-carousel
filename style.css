@@ -1,4 +1,3 @@
-/* === Final Fade Carousel CSS === */
 body {
   margin: 0;
   padding: 0;
@@ -10,7 +9,7 @@ body {
   position: relative;
   width: 100%;
   max-width: 1920px;
-  aspect-ratio: 1920 / 600;
+  height: 600px; /* Use fixed height for precise alignment */
   margin: 0 auto;
   overflow: hidden;
   background-color: #000;
