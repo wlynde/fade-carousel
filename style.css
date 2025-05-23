@@ -40,3 +40,7 @@ body {
   object-position: center;
   display: block;
 }
+
+.fade-slide img {
+  background-color: red; /* Temporary for debugging */
+}
