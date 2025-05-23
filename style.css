@@ -9,7 +9,7 @@ body {
   position: relative;
   width: 100%;
   max-width: 1920px;
-  height: 600px; /* Use fixed height for precise alignment */
+  aspect-ratio: 1920 / 600; /* Maintain the correct image ratio */
   margin: 0 auto;
   overflow: hidden;
   background-color: #000;
