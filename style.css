@@ -1,49 +1,43 @@
-/* === Fade Carousel: Final Style Sheet === */
-
+/* === Final Fade Carousel CSS === */
 body {
   margin: 0;
   padding: 0;
+  background-color: #000;
   font-family: sans-serif;
 }
 
-.carousel {
+.dcbo-fade-carousel {
   position: relative;
   width: 100%;
   max-width: 1920px;
-  height: 600px; /* Match image height from Canva */
+  aspect-ratio: 1920 / 600;
   margin: 0 auto;
   overflow: hidden;
   background-color: #000;
 }
 
-.slides {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.slide {
+.fade-slide {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 1.5s ease-in-out;
   pointer-events: none;
   z-index: 0;
 }
 
-.slide.active {
+.fade-slide.active {
   opacity: 1;
   pointer-events: auto;
   z-index: 1;
 }
 
-.slide img {
+.fade-slide img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Prevent cropping */
+  object-fit: cover;
   object-position: center;
   display: block;
-  background-color: #000; /* Fill any space with*
+}
