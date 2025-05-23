@@ -1,11 +1,19 @@
-const slides = document.querySelectorAll('.slide');
+const slides = document.querySelectorAll('.fade-slide');
 let currentSlide = 0;
-const slideInterval = 5000; // 5 seconds
+const totalSlides = slides.length;
+const interval = 8000; // 8 seconds
 
-function showNextSlide() {
-  slides[currentSlide].classList.remove('active');
-  currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].classList.add('active');
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+  });
+  slides[index].classList.add('active');
 }
 
-setInterval(showNextSlide, slideInterval);
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  showSlide(currentSlide);
+}
+
+showSlide(currentSlide);
+setInterval(nextSlide, interval);
