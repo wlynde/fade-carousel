@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fade Carousel</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
 </head>
 <body>
   <div class="carousel">
@@ -24,6 +30,17 @@
       </div>
     </div>
   </div>
-  <script src="script.js"></script>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let current = 0;
+    const duration = 8000; // 8 seconds
+
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, duration);
+  </script>
 </body>
 </html>
